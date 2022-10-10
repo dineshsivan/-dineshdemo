@@ -42,15 +42,10 @@ public class AgentController {
 	}
 
 	@ApiOperation(value = "Finds agent by id", responseContainer = "Agent")
-
 	@ApiResponses(value = { @ApiResponse(code = 200, message = "Success"),
-
 			@ApiResponse(code = 400, message = "Bad Request"), @ApiResponse(code = 404, message = "Not Found"),
-
 			@ApiResponse(code = 500, message = "Internal server error occurred") })
-
 	@ApiParam(value = "Agent's {id}", required = true)
-
 	@GetMapping(value = "/agents/{id}")
 	public Agent findContact(@PathVariable("id") Long id) {
 		return service.find(id);
