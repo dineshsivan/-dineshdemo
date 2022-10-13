@@ -20,7 +20,7 @@ pipeline {
 	           }
               
 	     }
-	     stage('Deploy To Cluster') {
+	     stage('Deploy To Kubernetes Cluster') {
 	                         
 	           steps {
 	               build 'AgentSvc_DeployToCluster'
