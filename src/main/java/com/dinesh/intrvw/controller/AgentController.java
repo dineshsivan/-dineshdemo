@@ -66,6 +66,5 @@ public class AgentController {
 		service.delete(id);
 	}
 
-	// test
 
 }
