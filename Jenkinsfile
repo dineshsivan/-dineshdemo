@@ -3,14 +3,14 @@ pipeline {
 
 	stages {
 	    
-	    stage('Build the application') {
+	    stage('Build Agent Svc application') {
 	                         
 	           steps {
 	               build 'AgentSvc_Build'
 	           }
               
 	     }
-	     stage('Build the container image') {
+	     stage('Publish to Registry') {
 	                         
 	           steps {
 	              
@@ -20,7 +20,7 @@ pipeline {
 	           }
               
 	     }
-	     stage('Deploy the changes to server') {
+	     stage('Deploy To Cluster') {
 	                         
 	           steps {
 	               build 'AgentSvc_DeployToCluster'
