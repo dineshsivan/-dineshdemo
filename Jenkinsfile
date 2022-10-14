@@ -6,7 +6,7 @@ pipeline {
 	    stage('Build Agent Svc application') {
 	                         
 	           steps {
-	               build 'AgentSvc_Build'
+	               build 'AgentSvc_buildNew'
 	           }
               
 	     }
