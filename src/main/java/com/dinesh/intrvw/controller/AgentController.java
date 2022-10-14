@@ -51,20 +51,21 @@ public class AgentController {
 		return service.find(id);
 	}
 
-	@ApiOperation(value = "Deletes agent by Id", responseContainer = "void")
-
-	@ApiResponses(value = { @ApiResponse(code = 200, message = "Success"),
-
-			@ApiResponse(code = 400, message = "Bad Request"), @ApiResponse(code = 404, message = "Not Found"),
-
-			@ApiResponse(code = 500, message = "Internal server error occurred") })
-
-	@ApiParam(value = "Agent's {id}", required = true)
-
-	@DeleteMapping(value = "/agents/{id}")
-	public void deleteContact(@PathVariable("id") Long id) {
-		service.delete(id);
-	}
+	/*
+	 * @ApiOperation(value = "Deletes agent by Id", responseContainer = "void")
+	 * 
+	 * @ApiResponses(value = { @ApiResponse(code = 200, message = "Success"),
+	 * 
+	 * @ApiResponse(code = 400, message = "Bad Request"), @ApiResponse(code = 404,
+	 * message = "Not Found"),
+	 * 
+	 * @ApiResponse(code = 500, message = "Internal server error occurred") })
+	 * 
+	 * @ApiParam(value = "Agent's {id}", required = true)
+	 * 
+	 * @DeleteMapping(value = "/agents/{id}") public void
+	 * deleteContact(@PathVariable("id") Long id) { service.delete(id); }
+	 */
 
 
 }

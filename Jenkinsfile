@@ -2,10 +2,13 @@ pipeline {
 	agent any
 
 	stages {
+	
+
 	    
 	    stage('Build Agent Svc application') {
 	                         
 	           steps {
+	           
 	               build 'AgentSvc_buildNew'
 	           }
               
