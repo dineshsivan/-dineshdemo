@@ -67,8 +67,8 @@ public class ImageProcessorNew {
 		BufferedImage loadedStamp = stamp.getBufferedImage();
 		BufferedImage loadedSign = sign.getBufferedImage();
 
-		int x = 600 - loadedStamp.getWidth();
-		int y = 550 - (loadedSign.getHeight()+loadedStamp.getHeight());
+		int x = (600 - loadedStamp.getWidth());
+		int y = (550 - (loadedSign.getHeight()+loadedStamp.getHeight()))/2;
 		System.out.println(x + ":" + y);
 		Graphics2D g2d = combine.createGraphics();
 		if(!"png".equalsIgnoreCase(type))
@@ -77,8 +77,9 @@ public class ImageProcessorNew {
 		g2d.fillRect ( 0, 0, combine.getWidth(), combine.getHeight() );
 		}
 		g2d.drawImage(loadedStamp, x, y, null);
-		int x1 = 0;
-		int y1 = 550 - loadedSign.getHeight();
+		int x1 = (600-sign.getWidth())/2;
+		int y1 = (550 - loadedSign.getHeight());
+		System.out.println(x1 + ":" + y1);
 		g2d.drawImage(loadedSign, x1, y1, null);
 		g2d.dispose();
 
